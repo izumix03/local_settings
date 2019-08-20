@@ -1,6 +1,6 @@
 ---
 - name: check installed node.js
-  shell: $SHELL -lc "which nodebrew"
+  shell: $SHELL -lc "which node"
   register: nodejs_installed
   failed_when: nodejs_installed.rc != 1 and nodejs_installed.rc != 0
   

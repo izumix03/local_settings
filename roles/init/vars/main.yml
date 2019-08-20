@@ -37,3 +37,4 @@ brew_packages:
   - nodebrew
   - rbenv
   - ruby-build
+  - go
