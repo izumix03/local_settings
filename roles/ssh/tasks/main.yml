@@ -1,0 +1,16 @@
+---
+- name: mkdir .ssh
+  file:
+    path: ~/.ssh
+    state: directory
+    mode: 0755
+
+- name: create key pair
+  openssh_keypair: 
+    path: "$HOME/.ssh/id_rsa"
+
+- name: set config
+  template:
+    src: config
+    dest: ~/.ssh/config
+    mode: 0644

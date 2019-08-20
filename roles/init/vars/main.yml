@@ -1,0 +1,39 @@
+---
+brew_taps:
+  - homebrew/core
+  - caskroom/cask
+brew_cask_apps:
+  - alfred
+  - docker
+  - firefox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - visual-studio-code
+  - evernote
+  - slack
+  - shiftit
+  - wechat
+  - intellij-idea 
+  - goland
+  - clion
+  - rubymine
+  - coteditor
+brew_packages:
+  - autoconf
+  - awscli
+  - bash-completion
+  - docker-compose
+  - docker-machine
+  - git
+  - jq
+  - nmap
+  - openssl
+  - tig
+  - tree
+  - wget
+  - zsh
+  - zsh-syntax-highlighting
+  - nodebrew
+  - rbenv
+  - ruby-build
