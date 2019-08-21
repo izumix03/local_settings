@@ -1,0 +1,56 @@
+---
+- name: mkdir tools
+  file:
+    path: ~/tools
+    state: directory
+    mode: 0755
+
+- name: check the final result already exists
+  stat: 
+    path: "{{ gloud_dir }}"
+  register: gcloud_exists
+
+- name: download some tarball
+  get_url: 
+    url: "{{ download_url }} "
+    sha256sum: "{{ csum }}"
+    dest: "{{ gloud_gz_path }}"
+    force: True
+  register: downloaded_tarball
+  when: not gcloud_exists.stat.exists
+
+- name: find out if build is necessary.
+  set_fact:
+    need_to_build: "{{ gcloud_exists.stat.exists == False or gcloud_exists.stat.size == 0 or downloaded_tarball is changed }}"
+
+- name: cleanup the build directory
+  file: 
+    path: "{{ gloud_dir }}"
+    state: absent
+  when: need_to_build
+
+- name: prepare the build directory
+  file: 
+    path: "{{ gloud_dir }}"
+    state: directory
+  when: need_to_build
+
+- name: untar the tarball
+  command: tar -xzf {{ gloud_gz_path }} -C {{ gloud_dir }} --strip-components=1
+  when: need_to_build
+
+- name: clean up gz
+  file:
+    path: "{{ gloud_gz_path }}"
+    state: absent
+  when: need_to_build
+
+- name: install gcloud
+  command: "echo no | {{ gloud_dir }}/install.sh"
+  when: need_to_build
+
+- name: set gcloud path
+  template:
+    src: 001_gcloud.sh
+    dest: ~/.bash.d/001_gcloud.sh
+    mode: 0755
