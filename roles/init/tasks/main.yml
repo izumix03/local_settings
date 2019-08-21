@@ -33,3 +33,12 @@
     path: ~/.bash.d
     state: directory
     mode: 0755
+
+- name: initial config for git (user)
+  shell: git config --global user.name {{ git_user }}
+
+- name: initial config for git (email)
+  shell: git config --global user.email {{ git_email }}
+
+- name: change git push default
+  shell: git config push.default current

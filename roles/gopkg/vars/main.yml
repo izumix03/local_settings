@@ -1,4 +1,7 @@
 ---
 gopkgs:
   - github.com/stormcat24/protodep
+  - github.com/golang/protobuf/protoc-gen-go
+  - github.com/mwitkow/go-proto-validators/protoc-gen-govalidators
+  - github.com/golang/dep/cmd/dep
 go_get: False

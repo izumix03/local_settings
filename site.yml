@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   roles:
-    # - init
-    # - ssh
-    # - nodebrew
+    - init
+    - ssh
+    - nodebrew
     - gopkg
