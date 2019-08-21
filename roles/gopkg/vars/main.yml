@@ -1,0 +1,4 @@
+---
+gopkgs:
+  - github.com/stormcat24/protodep
+go_get: False
