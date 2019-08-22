@@ -19,6 +19,7 @@ brew_cask_apps:
   - clion
   - rubymine
   - coteditor
+  - webstorm
 brew_packages:
   - autoconf
   - awscli

@@ -1,0 +1,4 @@
+---
+- name: for local emulator
+  command: $SHELL -lc "npm i -g {{ item }}"
+  with_items: "{{ npm_global_modules }}"
