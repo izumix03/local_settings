@@ -5,6 +5,8 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
 # load bash flagment
 if [ -d "${HOME}/.bash.d" ] ; then
     for f in "${HOME}"/.bash.d/*.sh ; do
@@ -12,7 +14,5 @@ if [ -d "${HOME}/.bash.d" ] ; then
     done
     unset f
 fi
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH

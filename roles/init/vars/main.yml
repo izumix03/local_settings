@@ -14,12 +14,8 @@ brew_cask_apps:
   - slack
   - shiftit
   - wechat
-  - intellij-idea 
-  - goland
-  - clion
-  - rubymine
   - coteditor
-  - webstorm
+  - jetbrains-toolbox
 brew_packages:
   - autoconf
   - awscli
@@ -40,5 +36,16 @@ brew_packages:
   - ruby-build
   - go
   - protobuf
+  - thefuck
+  - coreutils
+  - findutils
+  - gnu-tar
+  - gnu-sed
+  - gawk
+  - gnutls
+  - gnu-indent
+  - gnu-getopt
+  - grep
+
 git_user: izumix03
 git_email: takahiro.izumikawa@gmail.com
