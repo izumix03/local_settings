@@ -2,6 +2,7 @@
 brew_taps:
   - homebrew/core
   - caskroom/cask
+  - go-swagger/go-swagger
 brew_cask_apps:
   - alfred
   - docker
@@ -46,6 +47,7 @@ brew_packages:
   - gnu-indent
   - gnu-getopt
   - grep
-
+  - go-swagger
+  - zsh-completions
 git_user: izumix03
 git_email: takahiro.izumikawa@gmail.com
