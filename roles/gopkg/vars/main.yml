@@ -4,4 +4,5 @@ gopkgs:
   - github.com/golang/protobuf/protoc-gen-go
   - github.com/mwitkow/go-proto-validators/protoc-gen-govalidators
   - github.com/golang/dep/cmd/dep
+  - github.com/golang/mock/mockgen
 go_get: False

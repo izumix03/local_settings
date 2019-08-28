@@ -9,6 +9,10 @@
   openssh_keypair: 
     path: "$HOME/.ssh/id_rsa"
 
+- name: create key pair
+  openssh_keypair: 
+    path: "$HOME/.ssh/gitlab_rsa"
+
 - name: set config
   template:
     src: config
