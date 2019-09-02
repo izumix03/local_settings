@@ -49,5 +49,6 @@ brew_packages:
   - grep
   - go-swagger
   - zsh-completions
+  - zsh-autosuggestions
 git_user: izumix03
 git_email: takahiro.izumikawa@gmail.com

@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 fpath=(path/to/zsh-completions/src $fpath)
+eval $(thefuck --alias)
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh

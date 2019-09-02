@@ -10,12 +10,18 @@
   command: chsh -s /usr/local/bin/zsh
   become: yes
 
-- name: install prezto
+- name: check prezto already exists
+  stat:
+    path: "${HOME}/.zprezto"
+  register: prezto_exists
+
+- name: Install prezto
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: "${HOME}/.zprezto"
+  when: not prezto_exists.stat.exists
 
-- name: configure prezto
+- name: Configure prezto
   command: |
     /usr/local/bin/zsh -lc "setopt EXTENDED_GLOB
     for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -23,14 +29,19 @@
     done"
   ignore_errors: True
 
-- name: deploy .zshrc
+- name: Deploy .zshrc
   template:
     src: .zshrc
     dest: ~/.zshrc
     mode: 0644
 
-- name: remove ~/.zcompdump
+- name: Change nano to vim
+  template:
+    src: .zprofile
+    dest: ~/.zprofile
+    mode: 0644
+
+- name: Remove ~/.zcompdump
   file:
     path: ~/.zcompdump
     state: absent
-

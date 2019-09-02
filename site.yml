@@ -2,10 +2,10 @@
 - hosts: localhost
   connection: local
   roles:
-#    - init
-#    - ssh
-#    - nodebrew
-#    - gopkg
-#    - gcloud
-#    - cloud_functions
+    - init
     - zsh
+    - ssh
+    - nodebrew
+    - gopkg
+    - cloud_functions
+    - gcloud

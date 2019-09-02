@@ -1,8 +1,14 @@
 ---
-- name: set golang path
+- name: Set golang path for bash
   template:
     src: 001_golang.sh
     dest: ~/.bash.d/001_golang.sh
+    mode: 0755
+
+- name: Set golang path for zsh
+  template:
+    src: 001_golang.sh
+    dest: ~/.zsh.d/001_golang.sh
     mode: 0755
 
 - name: "Go-Lang | Run get commands"

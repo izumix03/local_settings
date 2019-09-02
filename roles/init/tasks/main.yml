@@ -22,40 +22,58 @@
     name: "{{ brew_packages }}"
     state: "present"
 
-- name: deploy .bash_profile
+- name: Deploy .bash_profile
   template:
     src: .bash_profile
     dest: ~/.bash_profile
     mode: 0644
 
-- name: mkdir .bash.d
+- name: Mkdir .bash.d
   file:
     path: ~/.bash.d
     state: directory
     mode: 0755
 
-- name: deploy 001_thefuck.sh
+- name: Mkdir .zsh.d
+  file:
+    path: ~/.zsh.d
+    state: directory
+    mode: 0755
+
+- name: Deploy 001_thefuck.sh
   template:
     src: 001_thefuck.sh
     dest: ~/.bash.d/001_thefuck.sh
     mode: 0755
 
-- name: deploy 001_gnu.sh
+- name: Deploy 001_gnu.sh
   template:
     src: 001_gnu.sh
     dest: ~/.bash.d/001_gnu.sh
     mode: 0755
 
-- name: initial config for git (user)
+- name: Deploy 001_thefuck.sh
+  template:
+    src: 001_thefuck.sh
+    dest: ~/.bash.d/001_thefuck.sh
+    mode: 0755
+
+- name: Deploy 001_gnu.sh
+  template:
+    src: 001_gnu.sh
+    dest: ~/.bash.d/001_gnu.sh
+    mode: 0755
+
+- name: Initial config for git (user)
   shell: git config --global user.name {{ git_user }}
 
-- name: initial config for git (email)
+- name: Initial config for git (email)
   shell: git config --global user.email {{ git_email }}
 
-- name: change git push default
+- name: Change git push default
   shell: git config push.default current
 
-- name: mkdir dev 
+- name: Mkdir dev
   file:
     path: ~/dev
     state: directory

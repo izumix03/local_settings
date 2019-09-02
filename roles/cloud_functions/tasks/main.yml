@@ -1,4 +1,12 @@
 ---
-- name: for local emulator
-  command: $SHELL -lc "npm i -g {{ item }}"
-  with_items: "{{ npm_global_modules }}"
+- name: Install "firebase-tools" node.js package
+  npm:
+    name: firebase-tools
+    global: yes
+    state: present
+
+- name: Install "@google-cloud/functions-emulator" node.js package
+  npm:
+    name: "@google-cloud/functions-emulator"
+    global: yes
+    state: present

@@ -1,4 +1,0 @@
----
-npm_global_modules:
-  - firebase-tools
-  - "@google-cloud/functions-emulator"

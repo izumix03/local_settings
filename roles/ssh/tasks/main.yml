@@ -1,19 +1,19 @@
 ---
-- name: mkdir .ssh
+- name: Mkdir .ssh
   file:
     path: ~/.ssh
     state: directory
     mode: 0755
 
-- name: create key pair
+- name: Generate key pair for github
   openssh_keypair: 
     path: "$HOME/.ssh/id_rsa"
 
-- name: create key pair
+- name: Generate key pair for gitlab
   openssh_keypair: 
     path: "$HOME/.ssh/gitlab_rsa"
 
-- name: set config
+- name: Set config file
   template:
     src: config
     dest: ~/.ssh/config
