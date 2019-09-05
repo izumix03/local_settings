@@ -17,6 +17,7 @@ brew_cask_apps:
   - wechat
   - coteditor
   - jetbrains-toolbox
+  - insomnia
 brew_packages:
   - autoconf
   - awscli
