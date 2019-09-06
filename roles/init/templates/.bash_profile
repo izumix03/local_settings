@@ -16,3 +16,6 @@ if [ -d "${HOME}/.bash.d" ] ; then
 fi
 
 export PATH
+
+## for rust
+export PATH="$HOME/.cargo/bin:$PATH"

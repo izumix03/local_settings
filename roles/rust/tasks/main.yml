@@ -1,0 +1,15 @@
+---
+- name: check rustup already exists
+  stat:
+    path: ~/tools/rustup.sh
+  register: rust_exists
+
+- name: Install 'rustup'
+  get_url:
+    url: https://sh.rustup.rs
+    dest: ~/tools/rustup.sh
+  when: not rust_exists.stat.exists
+
+- name: Execute rustup install
+  command: sh ~/tools/rustup.sh -y
+  when: not rust_exists.stat.exists
