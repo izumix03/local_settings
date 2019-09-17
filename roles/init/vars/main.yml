@@ -51,5 +51,6 @@ brew_packages:
   - go-swagger
   - zsh-completions
   - zsh-autosuggestions
+  - pipenv
 git_user: izumix03
 git_email: takahiro.izumikawa@gmail.com

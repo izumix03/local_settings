@@ -1,0 +1,12 @@
+---
+- name: Mkdir .config
+  file:
+    path: ~/.config
+    state: directory
+    mode: 0755
+
+- name: Set config file
+  template:
+    src: flake8
+    dest: ~/.config/flake8
+    mode: 0644
