@@ -10,4 +10,6 @@
     - cloud_functions
     - gcloud
     - rust
-    - python
+    - python # this requires flake8
+    - grpc
+    - opencv

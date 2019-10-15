@@ -18,6 +18,7 @@ brew_cask_apps:
   - coteditor
   - jetbrains-toolbox
   - insomnia
+  - kindle
 brew_packages:
   - autoconf
   - awscli

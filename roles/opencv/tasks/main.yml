@@ -1,0 +1,30 @@
+---
+- name: Homebrew tap
+  tags: opencv
+  homebrew_tap:
+    name: brewsci/bio
+    state: "present"
+
+- name: Update Homebrew
+  tags: opencv
+  homebrew:
+    update_homebrew: yes
+
+- name: Install Homebrew Packages
+  tags: opencv
+  homebrew:
+    name: cmake
+    state: "present"
+
+- name: Install Homebrew Packages
+  tags: opencv
+  homebrew:
+    name: opencv
+    state: "present"
+
+- name: Deploy 001_opencv.sh
+  tags: init
+  template:
+    src: 001_opencv.sh
+    dest: ~/.zsh.d/001_opencv.sh
+    mode: 0755

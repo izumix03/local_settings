@@ -1,0 +1,12 @@
+---
+- name: Homebrew tap
+  tags: grpc
+  homebrew_tap:
+    name: "grpc/grpc"
+    state: "present"
+
+- name: Install Homebrew grpc packages
+  tags: grpc
+  homebrew:
+    name: "grpc"
+    state: "present"
