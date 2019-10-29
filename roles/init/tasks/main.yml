@@ -48,6 +48,7 @@
     mode: 0755
 
 - name: Deploy 001_gnu.sh
+  tags: init
   template:
     src: 001_gnu.sh
     dest: ~/.bash.d/001_gnu.sh
@@ -58,6 +59,20 @@
   template:
     src: 001_thefuck.sh
     dest: ~/.bash.d/001_thefuck.sh
+    mode: 0755
+
+- name: Deploy 001_gnu.sh
+  tags: init
+  template:
+    src: 001_gnu.sh
+    dest: ~/.zsh.d/001_gnu.sh
+    mode: 0755
+
+- name: Deploy 001_thefuck.sh
+  tags: init
+  template:
+    src: 001_thefuck.sh
+    dest: ~/.zsh.d/001_thefuck.sh
     mode: 0755
 
 - name: Initial config for git (user)

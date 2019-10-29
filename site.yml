@@ -12,4 +12,3 @@
     - rust
     - python # this requires flake8
     - grpc
-    - opencv
