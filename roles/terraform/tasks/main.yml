@@ -1,0 +1,11 @@
+---
+- name: Update Homebrew
+  tags: terraform
+  homebrew:
+    update_homebrew: yes
+
+- name: Install Homebrew Packages
+  tags: terraform
+  homebrew:
+    name: "terraform"
+    state: "present"
