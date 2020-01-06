@@ -1,4 +1,4 @@
-# loacl_settings
+# local_settings
 
 # Execute
 ```shell script
