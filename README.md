@@ -1,5 +1,11 @@
 # local_settings
 
+# Install
+
+```
+brew install ansible
+```
+
 # Execute
 ```shell script
 ansible-playbook site.yml --ask-become-pass

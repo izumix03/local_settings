@@ -2,14 +2,14 @@
 - hosts: localhost
   connection: local
   roles:
-    - init
-    - zsh
-    - ssh
-    - nodebrew
-    - gopkg
-    - cloud_functions
-    - gcloud
-    - rust
-    - python # this requires flake8
-    - grpc
-    - terraform
+    - { role: init, tags: init }
+    - { role: zsh, tags: zsh }
+    - { role: ssh, tags: ssh }
+    - { role: nodebrew, tags: nodebrew }
+    - { role: gopkg, tags: gopkg }
+    - { role: cloud_functions, tags: cloud_functions }
+    - { role: gcloud, tags: gcloud }
+    - { role: rust, tags: rust }
+    - { role: python, tags: python } # this requires flake8
+    - { role: grpc, tags: grpc }
+    - { role: terraform, tags: terraform }

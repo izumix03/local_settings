@@ -6,7 +6,7 @@
     mode: 0755
 
 - name: Generate key pair for github
-  openssh_keypair: 
+  openssh_keypair:
     path: "$HOME/.ssh/id_rsa"
 
 - name: Generate key pair for gitlab
