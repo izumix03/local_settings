@@ -1,5 +1,6 @@
 ---
 - name: deploy shell
+  tags: zsh
   template:
     src: shells
     dest: /etc/shells
@@ -7,21 +8,25 @@
   become: yes
 
 - name: change login shell
+  tags: zsh
   command: chsh -s /usr/local/bin/zsh
   become: yes
 
 - name: check prezto already exists
+  tags: zsh
   stat:
     path: "${HOME}/.zprezto"
   register: prezto_exists
 
 - name: Install prezto
+  tags: zsh
   git:
     repo: https://github.com/sorin-ionescu/prezto.git
     dest: "${HOME}/.zprezto"
   when: not prezto_exists.stat.exists
 
 - name: Configure prezto
+  tags: zsh
   command: |
     /usr/local/bin/zsh -lc "setopt EXTENDED_GLOB
     for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -30,18 +35,21 @@
   ignore_errors: True
 
 - name: Deploy .zshrc
+  tags: zsh
   template:
     src: .zshrc
     dest: ~/.zshrc
     mode: 0644
 
 - name: Change nano to vim
+  tags: zsh
   template:
     src: .zprofile
     dest: ~/.zprofile
     mode: 0644
 
 - name: Remove ~/.zcompdump
+  tags: zsh
   file:
     path: ~/.zcompdump
     state: absent
