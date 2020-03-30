@@ -1,4 +1,10 @@
-# loacl_settings
+# local_settings
+
+# Install
+
+```
+brew install ansible
+```
 
 # Execute
 ```shell script
