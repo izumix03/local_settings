@@ -34,6 +34,12 @@
     dest: ~/.zsh.d/001_thefuck.sh
     mode: 0755
 
+- name: Deploy 002_anyenv.sh
+  template:
+    src: 002_anyenv.sh
+    dest: ~/.zsh.d/002_anyenv.sh
+    mode: 0755
+
 - name: Initial config for git (user)
   shell: git config --global user.name {{ git_user }}
 
