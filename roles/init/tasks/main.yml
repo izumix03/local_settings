@@ -50,3 +50,5 @@
     dest: ~/.zshrc
     mode: 0644
 
+- name: Initialize anyenv
+  shell: anyenv init && anyenv install --init
