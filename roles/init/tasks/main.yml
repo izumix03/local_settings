@@ -57,4 +57,4 @@
     mode: 0644
 
 - name: Initialize anyenv
-  shell: anyenv init && anyenv install --init
+  shell: anyenv init && yes | anyenv install --init
