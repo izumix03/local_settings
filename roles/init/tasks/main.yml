@@ -57,4 +57,13 @@
     mode: 0644
 
 - name: Initialize anyenv
-  shell: anyenv init && yes | anyenv install --init
+  shell: anyenv init
+
+- name: Check file
+  stat:
+    path: ~/.config/anyenv/anyenv-install
+  register: already_initialize_anyenv
+
+- name: Initialize anyenv install
+  shell: yes | anyenv install --init
+  when: not already_initialize_anyenv.exists
