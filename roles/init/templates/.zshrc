@@ -26,4 +26,7 @@ setopt auto_cd
 # disable ctrl+s, ctrl+q
 setopt no_flow_control
 
-source ~/.zsh.d/zshrc
+if [[ -d "$HOME"/.zsh.d ]]
+then
+    ZDOTDIR="$HOME"/.zsh.d
+fi
