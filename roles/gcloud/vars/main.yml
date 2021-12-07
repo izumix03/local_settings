@@ -1,5 +1,0 @@
----
-download_url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-180.0.0-darwin-x86_64.tar.gz?hl=ja
-csum: 1e624d8e555bceda254b0358f943c2c2b353a9857336d436db0daa6e35cedcc5
-gloud_dir: ~/tools/gcloud
-gloud_gz_path: ~/tools/gcloud.tar.gz
