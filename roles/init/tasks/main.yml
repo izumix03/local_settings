@@ -62,7 +62,7 @@
 
 - name: Check file
   stat:
-    path: ~/.config/anyenv/anyenv-install
+    path: "{{ansible_env.HOME}}"/.config/anyenv/anyenv-install
   register: already_initialize_anyenv
 
 - name: Initialize anyenv install
