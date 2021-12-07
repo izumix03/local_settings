@@ -58,6 +58,7 @@
 
 - name: Initialize anyenv
   shell: anyenv init
+  ignore_errors: true
 
 - name: Check file
   stat:
