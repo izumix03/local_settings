@@ -22,8 +22,14 @@
     name: "{{ brew_packages }}"
     state: "present"
 
+- name: Check Oh My Zsh dir
+  stat:
+    path: "{{ansible_env.HOME}}/.oh-my-zsh"
+  register: already_initialize_oh_my_zsh
+
 - name: Install Oh My Zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: not already_initialize_oh_my_zsh.stat.exists
 
 - name: Mkdir .zsh.d
   file:
