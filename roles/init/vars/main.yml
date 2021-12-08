@@ -14,6 +14,7 @@ brew_cask_apps:
   - coteditor
   - jetbrains-toolbox
   - insomnia
+  - skitch
 brew_packages:
   - autoconf
   - awscli
