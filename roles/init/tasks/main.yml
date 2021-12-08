@@ -22,6 +22,9 @@
     name: "{{ brew_packages }}"
     state: "present"
 
+- name: Install Oh My Zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 - name: Mkdir .zsh.d
   file:
     path: ~/.zsh.d
@@ -38,6 +41,12 @@
   template:
     src: 002_anyenv.sh
     dest: ~/.zsh.d/002_anyenv.sh
+    mode: 0755
+
+- name: Deploy 003_zsh.sh
+  template:
+    src: 003_zsh.sh
+    dest: ~/.zsh.d/003_zsh.sh
     mode: 0755
 
 - name: Initial config for git (user)
