@@ -4,3 +4,9 @@
 
 - name: Complete installation SDKMAN
   shell: source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+- name: Deploy sdkman.sh
+  template:
+    src: sdkman.sh
+    dest: ~/.zsh.d/sdkman.sh
+    mode: 0755

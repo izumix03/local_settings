@@ -37,22 +37,22 @@
     state: directory
     mode: 0755
 
-- name: Deploy 001_thefuck.sh
+- name: Deploy thefuck.sh
   template:
-    src: 001_thefuck.sh
-    dest: ~/.zsh.d/001_thefuck.sh
+    src: thefuck.sh
+    dest: ~/.zsh.d/thefuck.sh
     mode: 0755
 
-- name: Deploy 002_anyenv.sh
+- name: Deploy anyenv.sh
   template:
-    src: 002_anyenv.sh
-    dest: ~/.zsh.d/002_anyenv.sh
+    src: anyenv.sh
+    dest: ~/.zsh.d/anyenv.sh
     mode: 0755
 
-- name: Deploy 003_zsh.sh
+- name: Deploy zsh.sh
   template:
-    src: 003_zsh.sh
-    dest: ~/.zsh.d/003_zsh.sh
+    src: zsh.sh
+    dest: ~/.zsh.d/zsh.sh
     mode: 0755
 
 - name: Initial config for git (user)
