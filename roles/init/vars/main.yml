@@ -9,7 +9,6 @@ brew_cask_apps:
   - google-japanese-ime
   - iterm2
   - visual-studio-code
-  - evernote
   - slack
   - shiftit
   - coteditor
