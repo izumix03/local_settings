@@ -3,13 +3,5 @@
   connection: local
   roles:
     - { role: init, tags: init }
-    - { role: zsh, tags: zsh }
     - { role: ssh, tags: ssh }
-    - { role: nodebrew, tags: nodebrew }
-    - { role: gopkg, tags: gopkg }
-    - { role: cloud_functions, tags: cloud_functions }
-    - { role: gcloud, tags: gcloud }
-    - { role: rust, tags: rust }
-    - { role: python, tags: python } # this requires flake8
-    - { role: grpc, tags: grpc }
-    - { role: terraform, tags: terraform }
+    - { role: sdkman, tags: sdk }

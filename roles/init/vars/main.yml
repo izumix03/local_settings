@@ -1,12 +1,10 @@
 ---
 brew_taps:
   - homebrew/core
-  - caskroom/cask
-  - go-swagger/go-swagger
+  - homebrew/cask
 brew_cask_apps:
   - alfred
   - docker
-  - firefox
   - google-chrome
   - google-japanese-ime
   - iterm2
@@ -14,46 +12,22 @@ brew_cask_apps:
   - evernote
   - slack
   - shiftit
-  - wechat
   - coteditor
   - jetbrains-toolbox
   - insomnia
-  - kindle
 brew_packages:
   - autoconf
   - awscli
-  - bash-completion
-  - docker-compose
-  - docker-machine
-  - git
   - jq
   - nmap
   - openssl
   - tig
   - tree
   - wget
-  - zsh
-  - zsh-syntax-highlighting
-  - nodebrew
-  - rbenv
-  - ruby-build
-  - go
-  - protobuf
+  - anyenv
   - thefuck
-  - coreutils
-  - findutils
-  - gnu-tar
-  - gnu-sed
-  - gawk
-  - gnutls
-  - gnu-indent
-  - gnu-getopt
-  - grep
-  - go-swagger
-  - zsh-completions
-  - zsh-autosuggestions
-  - pipenv
   - peco
-  - md5sha1sum
+  - zsh-completion
+  - zsh-syntax-highlighting
 git_user: izumix03
 git_email: takahiro.izumikawa@gmail.com
