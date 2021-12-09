@@ -5,3 +5,9 @@
     - { alias: 'st', cmd: 'status' }
     - { alias: 'c', cmd: 'checkout' }
     - { alias: 'coa', cmd: 'commit -am' }
+
+- name: Set git settings
+  shell: |
+    git config --global push.default current
+    git config --global pull.ff only
+    git config --global pull.rebase false
