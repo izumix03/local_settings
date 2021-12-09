@@ -1,0 +1,7 @@
+---
+- name: Set git alias status
+  shell: git config --global alias.{{ item.alias }} {{ item.cmd }}
+  with_items:
+    - { alias: 'st', cmd: 'status' }
+    - { alias: 'c', cmd: 'checkout' }
+    - { alias: 'coa', cmd: 'commit -am' }

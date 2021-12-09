@@ -5,3 +5,4 @@
     - { role: init, tags: init }
     - { role: ssh, tags: ssh }
     - { role: sdkman, tags: sdk }
+    - { role: git, tags: git }

@@ -61,9 +61,6 @@
 - name: Initial config for git (email)
   shell: git config --global user.email {{ git_email }}
 
-- name: Change git push default
-  shell: git config push.default current
-
 - name: set zshrc
   tags: zsh
   template:
