@@ -4,7 +4,7 @@
   with_items:
     - { alias: 'st', cmd: 'status' }
     - { alias: 'c', cmd: 'checkout' }
-    - { alias: 'coa', cmd: 'commit -am' }
+    - { alias: 'b', cmd: 'branch' }
 
 - name: Set git settings
   shell: |
