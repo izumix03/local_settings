@@ -6,11 +6,10 @@ brew_cask_apps:
   - alfred
   - docker
   - google-chrome
-  - google-japanese-ime
   - iterm2
   - visual-studio-code
   - slack
-  - shiftit
+  - spectacle
   - coteditor
   - jetbrains-toolbox
   - insomnia
