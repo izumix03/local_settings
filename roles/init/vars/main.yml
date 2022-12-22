@@ -9,7 +9,7 @@ brew_cask_apps:
   - iterm2
   - visual-studio-code
   - slack
-  - spectacle
+  - rectangle
   - coteditor
   - jetbrains-toolbox
   - insomnia
@@ -28,5 +28,3 @@ brew_packages:
   - peco
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-git_user: izumix03
-git_email: takahiro.izumikawa@gmail.com

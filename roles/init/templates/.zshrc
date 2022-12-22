@@ -26,10 +26,14 @@ setopt auto_cd
 # disable ctrl+s, ctrl+q
 setopt no_flow_control
 
+# disable nomatch
+setopt nonomatch
+
 if [ -d "${HOME}/.zsh.d" ] ; then
     for f in "${HOME}"/.zsh.d/*.sh ; do
         [ -x "$f" ] && . "$f"
     done
     unset f
 fi
+
 

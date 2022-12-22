@@ -55,12 +55,6 @@
     dest: ~/.zsh.d/zsh.sh
     mode: 0755
 
-- name: Initial config for git (user)
-  shell: git config --global user.name {{ git_user }}
-
-- name: Initial config for git (email)
-  shell: git config --global user.email {{ git_email }}
-
 - name: set zshrc
   tags: zsh
   template:
