@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   roles:
-    - { role: init, tags: init }
+    - { role: basic, tags: basic }
     - { role: ssh, tags: ssh }
     - { role: sdkman, tags: sdk }
     - { role: git, tags: git }

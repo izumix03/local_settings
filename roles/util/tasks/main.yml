@@ -1,0 +1,13 @@
+---
+- name: Mkdir .zsh.d
+  file:
+    path: ~/.zsh.d
+    state: directory
+    mode: 0755
+
+- name: Deploy util.sh
+  template:
+    src: util.sh
+    dest: ~/.zsh.d/util.sh
+    mode: 0755
+
