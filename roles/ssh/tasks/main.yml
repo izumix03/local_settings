@@ -13,8 +13,14 @@
   openssh_keypair:
     path: "$HOME/.ssh/gitlab_rsa"
 
+- name: Check file ~/.ssh/config
+  stat:
+    path: ~/.ssh/config
+  register: exists_config
+
 - name: Set config file
   template:
     src: config
     dest: ~/.ssh/config
     mode: 0644
+  when: not exists_config.stat.exists

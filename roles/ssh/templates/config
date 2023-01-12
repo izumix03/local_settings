@@ -9,3 +9,4 @@ Host gitlab
     User git
     IdentityFile ~/.ssh/gitlab_rsa
     IdentitiesOnly yes
+

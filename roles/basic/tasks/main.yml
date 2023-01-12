@@ -55,12 +55,18 @@
     dest: ~/.zsh.d/zsh.sh
     mode: 0755
 
+- name: Check file ~/.zshrc
+  stat:
+    path: ~/.zshrc
+  register: exists_zshrc
+
 - name: set zshrc
   tags: zsh
   template:
     src: .zshrc
     dest: ~/.zshrc
     mode: 0644
+  when: not exists_zshrc.stat.exists
 
 - name: Initialize anyenv
   shell: anyenv init
