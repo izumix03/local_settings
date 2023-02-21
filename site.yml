@@ -6,3 +6,5 @@
     - { role: ssh, tags: ssh }
     - { role: sdkman, tags: sdk }
     - { role: git, tags: git }
+    - { role: golang, tags: golang }
+    - { role: extend_terminal, tags: ex }

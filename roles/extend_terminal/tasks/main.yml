@@ -1,0 +1,44 @@
+---
+- name: Deploy anyenv.sh
+  template:
+    src: 01_anyenv.sh
+    dest: ~/.zsh.d/01_anyenv.sh
+    mode: 0755
+
+- name: Deploy zsh.sh
+  template:
+    src: 03_zsh.sh
+    dest: ~/.zsh.d/03_zsh.sh
+    mode: 0755
+
+- name: Check file ~/.zshrc
+  stat:
+    path: ~/.zshrc
+  register: exists_zshrc
+
+- name: Deploy extend.sh
+  template:
+    src: 10_extend.sh
+    dest: ~/.zsh.d/10_extend.sh
+    mode: 0755
+
+- name: Update Homebrew
+  homebrew:
+    update_homebrew: yes
+
+- name: Install Homebrew Packages
+  homebrew:
+    name: "pyenv"
+    state: "present"
+
+- name: Deploy pyenv.sh
+  template:
+    src: 04_pyenv.sh
+    dest: ~/.zsh.d/04_pyenv.sh
+    mode: 0755
+
+- name: Deploy golang.sh
+  template:
+    src: 05_golang.sh
+    dest: ~/.zsh.d/05_golang.sh
+    mode: 0755

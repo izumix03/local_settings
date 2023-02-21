@@ -7,6 +7,6 @@
 
 - name: Deploy sdkman.sh
   template:
-    src: sdkman.sh
-    dest: ~/.zsh.d/sdkman.sh
+    src: 06_sdkman.sh
+    dest: ~/.zsh.d/06_sdkman.sh
     mode: 0755
