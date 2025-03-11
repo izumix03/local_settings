@@ -6,7 +6,7 @@
   with_items: "{{ brew_taps }}"
 
 - name: Install Homebrew Cask Packages
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: "{{ item }}"
     state: "present"
     install_options: "appdir=/Applications"
@@ -37,20 +37,6 @@
     state: directory
     mode: 0755
 
-- name: Deploy thefuck.sh
-  template:
-    src: 02_thefuck.sh
-    dest: ~/.zsh.d/02_thefuck.sh
-    mode: 0755
-
-- name: set zshrc
-  tags: zsh
-  template:
-    src: .zshrc
-    dest: ~/.zshrc
-    mode: 0644
-  when: not exists_zshrc.stat.exists
-
 - name: Initialize anyenv
   shell: anyenv init
   ignore_errors: true
@@ -63,3 +49,16 @@
 - name: Initialize anyenv install
   shell: yes | anyenv install --init
   when: not already_initialize_anyenv.stat.exists
+
+- name: Check file ~/.zshrc
+  stat:
+    path: ~/.zshrc
+  register: exists_zshrc
+
+- name: set zshrc
+  tags: zsh
+  template:
+    src: .zshrc
+    dest: ~/.zshrc
+    mode: 0644
+  when: not exists_zshrc.stat.exists

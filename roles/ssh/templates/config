@@ -4,9 +4,4 @@ Host github
     User            git
     IdentitiesOnly yes
 
-Host gitlab 
-    HostName gitlab.com
-    User git
-    IdentityFile ~/.ssh/gitlab_rsa
-    IdentitiesOnly yes
 

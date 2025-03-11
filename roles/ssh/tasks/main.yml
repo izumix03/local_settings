@@ -9,10 +9,6 @@
   openssh_keypair:
     path: "$HOME/.ssh/id_rsa"
 
-- name: Generate key pair for gitlab
-  openssh_keypair:
-    path: "$HOME/.ssh/gitlab_rsa"
-
 - name: Check file ~/.ssh/config
   stat:
     path: ~/.ssh/config

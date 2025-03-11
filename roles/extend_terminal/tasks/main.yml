@@ -5,16 +5,17 @@
     dest: ~/.zsh.d/01_anyenv.sh
     mode: 0755
 
+- name: Deploy thefuck.sh
+  template:
+    src: 02_thefuck.sh
+    dest: ~/.zsh.d/02_thefuck.sh
+    mode: 0755
+
 - name: Deploy zsh.sh
   template:
     src: 03_zsh.sh
     dest: ~/.zsh.d/03_zsh.sh
     mode: 0755
-
-- name: Check file ~/.zshrc
-  stat:
-    path: ~/.zshrc
-  register: exists_zshrc
 
 - name: Deploy extend.sh
   template:

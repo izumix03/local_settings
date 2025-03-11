@@ -1,19 +1,16 @@
 ---
 brew_taps:
-  - homebrew/core
-  - homebrew/cask
+  - go-task/tap
 brew_cask_apps:
   - alfred
   - docker
   - google-chrome
   - iterm2
   - visual-studio-code
-  - slack
   - rectangle
   - coteditor
   - jetbrains-toolbox
   - insomnia
-  - skitch
 brew_packages:
   - autoconf
   - awscli
@@ -28,3 +25,8 @@ brew_packages:
   - peco
   - zsh-autosuggestions
   - zsh-syntax-highlighting
+  - dbmate
+  - go-task/tap/go-task
+  - mysql-client@8.0
+  - direnv
+  - sops
